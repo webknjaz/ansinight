@@ -38,7 +38,7 @@ jobs:
       run: |
         python -m dumb_pypi.main \
           --package-list <(ls ansible--ansible--devel/dist) \
-          --packages-url ./dist \
+          --packages-url https://raw.githubusercontent.com/${{ env.GITHUB_REPOSITORY }}/gh-pages/dist \
           --output-dir gh-pages-dumb-pypi
       shell: bash
     - name: Copy dists over to the generated dumb PyPI website dir
