@@ -19,6 +19,8 @@ jobs:
         path: ansible--ansible--devel
         ref: devel
         repository: ansible/ansible
+    - name: Install packaging dist from PyPI
+      run: python -m pip install packaging
     - name: Build ansible/ansible@devel
       run: make snapshot
       working-directory: ansible--ansible--devel
