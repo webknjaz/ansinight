@@ -26,7 +26,7 @@ jobs:
     - name: Make 'dist/' dir
       run: |
         from pathlib import Path
-        Path.mkdir('dist')
+        Path('dist').mkdir()
       shell: python
     - name: Install packaging-related dists from PyPI
       run: >-
