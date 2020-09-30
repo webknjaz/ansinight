@@ -97,6 +97,7 @@ jobs:
     - name: Copy dists over to the generated dumb PyPI website dir
       run: cp -av dist gh-pages-dumb-pypi/
     - name: Publish the dumb PyPI website to GH Pages
+      if: github.event_name != 'pull_request'
       uses: peaceiris/actions-gh-pages@v3
       with:
         force_orphan: true
